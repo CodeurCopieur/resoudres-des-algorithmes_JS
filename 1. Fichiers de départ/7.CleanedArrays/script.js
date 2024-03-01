@@ -1,4 +1,4 @@
-// Ma methode
+// Ma solution
 
 function removeDuplicates(arr) {
   var tab = []
@@ -11,6 +11,19 @@ function removeDuplicates(arr) {
   return tab
 }
 
+// La solution 2
+
+function removeDuplicates(arr) {
+  return arr.filter((item, index) => arr.indexOf(item) === index)
+}
+
+// La solution 3
+
+const removeDuplicates = arr => arr.reduce((acc, cur) => acc.indexOf(cur) < 0 ? [...acc, cur] : acc, [])
+
+// La solution 4
+
+const removeDuplicates = arr => [...new Set(arr)]
 
 /* ÉNONCÉ 📚 */
 
